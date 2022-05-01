@@ -1,0 +1,141 @@
+.fights {
+  font-size: 0;
+  margin: 0;
+  padding: 80px 160px 80px 160px;
+  box-sizing: border-box;
+  background-color: $primaryColor;
+  position: relative;
+  @media screen and (max-width: 1290px) {
+    padding: 50px 50px 80px;
+  }
+  @media screen and (max-width: 720px) {
+    padding: 20px;
+  }
+
+  &__title {
+    margin: 0;
+    padding-bottom: 40px;
+    background-color: $primaryColor;
+    @include font(
+      $font,
+      $textColor,
+      $weight: 600,
+      $size: 70px,
+      $lh: 63px,
+      $fontNormal: normal
+    );
+    @media screen and (max-width: 720px) {
+      @include font(
+        $font,
+        $textColor,
+        $weight: 600,
+        $size: 40px,
+        $lh: 36px,
+        $fontNormal: normal
+      );
+      max-width: 280px;
+      padding-bottom: 20px;
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+    background-color: $primaryColor;
+    @include font(
+      $font,
+      $textColor,
+      $weight: 400,
+      $size: 20px,
+      $lh: 26px,
+      $fontNormal: normal
+    );
+    max-width: 500px;
+    @media screen and (max-width: 720px) {
+      @include font(
+        $font,
+        $textColor,
+        $weight: 400,
+        $size: 12px,
+        $lh: 15.6px,
+        $fontNormal: normal
+      );
+      max-width: 280px;
+  }
+}
+
+  &__image-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 110px;
+    @media screen and (max-width: 1290px) {
+      padding-top: 140px;
+    }
+    @media screen and (max-width: 720px) {
+      padding-top: 60px;
+    }
+  }
+
+  &__image-wrapper :nth-child(3n) {
+    margin-right: 0;
+  }
+
+  &__image {
+    margin-right: 80px;
+    border-radius: 15px;
+    @media screen and (max-width: 1290px) {
+      margin-right: 28px;
+    }
+    @media screen and (max-width: 720px) {
+      max-width: 280px;
+      max-height: 280px;
+    }
+  }
+
+  &__chess-green {
+    background: url(../images/desk-green.svg) no-repeat center;
+    width: 416px;
+    height: 104px;
+    margin: 110px 0 0 63%;
+    @media screen and (max-width: 1290px) {
+      margin: 140px 0 0 252px;
+    }
+    @media screen and (max-width: 740px) {
+      margin: 60px 0 0 ;
+      margin-left: 30%;
+      background: url(../images/chess-green320.svg) no-repeat center;
+      width: 280px;
+      height: 70px;
+    }
+    @media screen and (max-width: 440px) {
+      margin: 60px 0 0 ;
+    }
+  }
+
+  &__half-circle {
+    background: url(../images/half-circle.svg) no-repeat center;
+    width: 440px;
+    height: 220px;
+    position: absolute;
+    bottom: 0;
+    left: 100px;
+    @media screen and (max-width: 1290px) {
+      left: -220px;
+    }
+    @media screen and (max-width: 1290px) {
+      visibility: hidden;
+    }
+  }
+  
+  &__points {
+    background: url(../images/points.svg) no-repeat center;
+    width: 44px;
+    height: 8px;
+    position: absolute;
+    visibility: hidden;
+    @media screen and (max-width: 320px) {
+      position: relative;
+      visibility: visible;
+      margin: 30px auto 0;
+    }
+  }
+}

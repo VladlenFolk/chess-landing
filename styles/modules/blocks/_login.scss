@@ -1,0 +1,78 @@
+.login {
+  background-color: $bootColor;
+  color: $textColor;
+  padding: 0;
+  border: 0;
+  border-radius: 8px;
+  width: 218px;
+  height: 48px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0.1px;
+  font-family: "NotoSans", Arial, Helvetica, sans-serif;
+  @media screen and (max-width: 660px) {
+    width: 184px;
+    height: 44px;
+    @include font(
+      $font,
+      $textColor,
+      $weight: 600,
+      $size: 13px,
+      $lh: 18px,
+      $fontNormal: normal
+    );
+  }
+  @media screen and (max-width: 450px) {
+    width: 140px;
+    height: 30px;
+    @include font(
+      $font,
+      $textColor,
+      $weight: 600,
+      $size: 10px,
+      $lh: 18px,
+      $fontNormal: normal
+    );
+  }
+
+  &_type_footer {
+    margin-bottom: 60px;
+    background-color: $bootColor;
+    color: $textColor;
+    padding: 0;
+    border: 0;
+    border-radius: 8px;
+    width: 218px;
+    height: 48px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.1px;
+    font-family: "NotoSans", Arial, Helvetica, sans-serif;
+    @media screen and (max-width: 450px) {
+      width: 140px;
+      height: 30px;
+      @include font(
+        $font,
+        $textColor,
+        $weight: 600,
+        $size: 10px,
+        $lh: 18px,
+        $fontNormal: normal
+      );
+      margin-bottom: 40px;
+    }
+  }
+
+  &_type_popup {
+    width: 108px;
+    height: 48px;
+  }
+
+  &:hover {
+    background: #066c4c;
+  }
+}

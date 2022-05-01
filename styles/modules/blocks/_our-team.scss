@@ -1,0 +1,260 @@
+.our-team {
+  font-size: 0;
+  margin: 0;
+  position: relative;
+  width: 100%;
+  background-color: $secondaryColor;
+  padding: 80px 160px 0;
+  box-sizing: border-box;
+  @media screen and (max-width: 1290px) {
+    padding: 50px 50px 0;
+  }
+  @media screen and (max-width: 720px) {
+    padding: 20px 20px 0;
+  }
+
+  &__title {
+    margin: 0;
+    @include font(
+      $font,
+      $textColor,
+      $weight: 600,
+      $size: 70px,
+      $lh: 63px,
+      $fontNormal: normal
+    );
+    @media screen and (max-width: 720px) {
+      @include font(
+        $font,
+        $textColor,
+        $weight: 600,
+        $size: 40px,
+        $lh: 36px,
+        $fontNormal: normal
+      );
+      max-width: 280px;
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+    padding: 40px 0 110px 0;
+    @include font(
+      $font,
+      $textColor,
+      $weight: 400,
+      $size: 20px,
+      $lh: 26px,
+      $fontNormal: normal
+    );
+    max-width: 500px;
+    @media screen and (max-width: 1290px) {
+      padding-bottom: 140px;
+    }
+    @media screen and (max-width: 720px) {
+      @include font(
+        $font,
+        $textColor,
+        $weight: 400,
+        $size: 12px,
+        $lh: 15.6px,
+        $fontNormal: normal
+      );
+      max-width: 280px;
+      padding: 20px 0 60px;
+    }
+  }
+
+  &__members {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__members :nth-child(3n) {
+    padding: 0;
+  }
+
+  &__members-wrapper {
+    display: flex;
+  }
+
+  &__member-card {
+    padding-right: 80px;
+    @media screen and (max-width: 1290px) {
+      padding-right: 28px;
+    }
+  }
+
+  &__member-image {
+    max-width: 320px;
+    max-height: 320px;
+    border-radius: 15px;
+    @media screen and (max-width: 720px) {
+      max-width: 280px;
+      max-height: 280px;
+    }
+  }
+
+  &__name {
+    margin: 0;
+    padding-top: 30px;
+    @include font(
+      $font,
+      $textColor,
+      $weight: 400,
+      $size: 22px,
+      $lh: 28px,
+      $fontNormal: normal
+    );
+    letter-spacing: 1.2px;
+    @media screen and (max-width: 320px) {
+      padding-top: 20px;
+      text-align: center;
+      @include font(
+        $font,
+        $textColor,
+        $weight: 400,
+        $size: 18px,
+        $lh: 23.4px,
+        $fontNormal: normal
+      );
+      letter-spacing: 5.5%;
+    }
+  }
+  &__hobby {
+    margin: 0;
+    margin-top: 10px;
+    @include font(
+      $font,
+      $textColor,
+      $weight: 400,
+      $size: 20px,
+      $lh: 26px,
+      $fontNormal: normal
+    );
+    @media screen and (max-width: 320px) {
+      text-align: center;
+      margin-top: 7px;
+      @include font(
+        $font,
+        $textColor,
+        $weight: 400,
+        $size: 12px,
+        $lh: 15.6px,
+        $fontNormal: normal
+      );
+    }
+  }
+
+  &__points {
+    background: url(../images/points.svg) no-repeat center;
+    width: 44px;
+    height: 8px;
+    position: absolute;
+    visibility: hidden;
+    @media screen and (max-width: 320px) {
+      position: relative;
+      visibility: visible;
+      margin: 30px auto 0;
+    }
+  }
+
+  &__question-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 252px 0 171px;
+    @media screen and (max-width: 1290px) {
+      padding: 171px 0 121px;
+    }
+    @media screen and (max-width: 1290px) {
+      padding: 60px 0 200px;
+    }
+  }
+
+  &__circle {
+    width: 880px;
+    height: 440px;
+    background: url(../images/circles2.svg) no-repeat center;
+    position: absolute;
+    bottom: 60px;
+    left: -110px;
+    overflow: hidden;
+    @include mediaImageL(
+      1360px,
+      url(../images/cercles-green2.svg),
+      180px,
+      360px,
+      50px,
+      0
+    );
+    @media screen and (max-width: 700px) {
+      background: url(../images/cercle-down.svg) no-repeat center;
+      width: 280px;
+      height: 140px;
+      bottom: 0;
+      left: 6vw;
+    }
+  }
+
+  &__question {
+    margin: 0;
+    @include font(
+      $font,
+      $textColor,
+      $weight: 600,
+      $size: 70px,
+      $lh: 63px,
+      $fontNormal: normal
+    );
+    max-width: 520px;
+    @media screen and (max-width: 1290px) {
+      max-width: 478px;
+    }
+    @media screen and (max-width: 700px) {
+      max-width: 280px;
+      @include font(
+        $font,
+        $textColor,
+        $weight: 600,
+        $size: 40px,
+        $lh: 36px,
+        $fontNormal: normal
+      );
+    }
+  }
+
+  &__guide-line {
+    margin: 0;
+    padding-top: 40px;
+    @include font(
+      $font,
+      $textColor,
+      $weight: 400,
+      $size: 20px,
+      $lh: 26px,
+      $fontNormal: normal
+    );
+    max-width: 520px;
+    @media screen and (max-width: 1290px) {
+      max-width: 478px;
+    }
+    @media screen and (max-width: 700px) {
+      max-width: 280px;
+      padding-top: 20px;
+      @include font(
+        $font,
+        $textColor,
+        $weight: 400,
+        $size: 12px,
+        $lh: 15.6px,
+        $fontNormal: normal
+      );
+    }
+  }
+
+  &__member-image {
+    width: 320px;
+    height: 320px;
+  }
+}
