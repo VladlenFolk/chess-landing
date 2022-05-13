@@ -1,0 +1,27 @@
+.points{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    position: absolute;
+    visibility: hidden;
+    @media screen and (max-width: 320px) {
+        position: relative;
+        visibility: visible;
+      }
+
+    &__point{
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        margin-right: 10px;
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    &__point:nth-child(3) {
+        margin-right: 0;
+    }
+
+    &__point_active{
+        background-color: #fff;
+    }
+}

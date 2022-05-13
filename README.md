@@ -7,4 +7,4 @@
 В этом проекте мы еще раз попрактиковались в адаптивной и резиновой верстки с использованием html и css, а также использовали JS для настройки кнопок.
 
 **Ссылка на проект**
-https://vladlenfolk.github.io/chess-landing/index.html
+https://vladlenfolk.github.io/chess-landing/hindex.html
