@@ -1,0 +1,48 @@
+@mixin flex(
+  $direction: row,
+  $justify: center,
+  $align: center,
+  $alignC: center
+) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $direction;
+  align-content: $alignC;
+}
+
+@mixin font(
+  $font,
+  $textColor,
+  $weight: 400,
+  $size: 16px,
+  $lh: 90%,
+  $fontNormal: normal
+) {
+  font-family: $font;
+  color: $textColor;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $lh;
+  font-style: $fontNormal;
+}
+
+@mixin mediaImageL($maxWidth, $background, $width, $heigh, $bot, $left) {
+  @media screen and (max-width: $maxWidth) {
+    background: $background no-repeat center;
+    width: $width;
+    height: $heigh;
+    bottom: $bot;
+    left: $left;
+  }
+}
+
+@mixin mediaImageR($maxWidth, $background, $width, $heigh, $bot, $right: 0) {
+  @media screen and (max-width: $maxWidth) {
+    background: $background no-repeat center;
+    width: $width;
+    height: $heigh;
+    bottom: $bot;
+    right: $right;
+  }
+}

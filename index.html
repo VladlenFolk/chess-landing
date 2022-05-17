@@ -1,12 +1,140 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Шахматный клуб" />
+    <meta name="author" content="Chees Club" />
+    <meta name="keyword" content="Правильные шахматы, Шахматный клуб" />
+    <title>Chess club</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body class="body">
+    <header class="header">
+      <div class="header__top">
+        <div class="header__logo"></div>
+        <div class="header__wrapper">
+          <div class="header__flex">
+            <p class="header__invitation">Вступайте в клуб</p>
+            <div class="header__vector"></div>
+          </div>
+          <button type="button" class="login">Зарегистрироваться</button>
+        </div>
+      </div>
+      <div class="header__rectangle-wrapper">
+        <img
+          src="images/Rectangle.svg"
+          class="header__rectangle"
+          alt="квадрат"
+        />
+        <p class="header__club">КЛУБ</p>
+      </div>
+      <h1 class="header__title">Правильные шахматы</h1>
+      <p class="header__subtitle">
+        Приходите к нам, играть в шахматы! Сразитесь классическом поединке, блиц
+        состязании и&#160;бою с гройсмейстером.
+      </p>
+      <div class="header__chess-desk"></div>
+      <div class="header__circles"></div>
+    </header>
+    <main class="main">
+      <section class="our-team">
+        <h3 class="our-team__title">Наша команда</h3>
+        <p class="our-team__subtitle">
+          Лучшие шахматисты и шахматистки любители России, гройсмейстеры, с ними
+          играть — одно удовольствие!
+        </p>
+        <div class="our-team__members">
+          <div class="our-team__member-card">
+            <img
+              class="our-team__member-image"
+              src="images/member1.jpg"
+              alt="шахматист Андрей"
+            />
+            <p class="our-team__name">АНДРЕЙ</p>
+            <p class="our-team__hobby">Шахматист, писатель.</p>
+          </div>
+          <div class="our-team__member-card">
+            <img
+              class="our-team__member-image"
+              src="images/member2.jpg"
+              alt="шахматист Никита"
+            />
+            <p class="our-team__name">НИКИТА</p>
+            <p class="our-team__hobby">Шахматист, кулинар.</p>
+          </div>
+          <div class="our-team__member-card">
+            <img
+              class="our-team__member-image"
+              src="images/member3.jpg"
+              alt="шахматист Андрей"
+            />
+            <p class="our-team__name">АЛЕКСЕЙ</p>
+            <p class="our-team__hobby">Шахматист, геймер.</p>
+          </div>
+        </div>
+        <div class="our-team__points"></div>
+        <div class="our-team__circle"></div>
+        <div class="our-team__question-wrapper">
+          <h3 class="our-team__question">Хочешь в&nbsp;комаду?</h3>
+          <p class="our-team__guide-line">
+            Свяжись с нами и мы обсудим все детали присоеденения к команде.
+          </p>
+        </div>
+      </section>
+      <section class="fights">
+        <h2 class="fights__title">Сражения</h2>
+        <p class="fights__subtitle">
+          Сражайтесь в парах и приятно проводите время. Если хотите прокачать
+          свои навыки — сыграйте с нашими шахматистами.
+        </p>
+        <div class="fights__image-wrapper">
+          <img
+            class="fights__image"
+            src="images/members.jpg"
+            alt="шахматисты"
+          />
+          <img
+            class="fights__image"
+            src="images/chess.jpg"
+            alt="шахматная доска"
+          />
+          <img
+            class="fights__image"
+            src="images/chess-desk.jpg"
+            alt="шахматная партия"
+          />
+        </div>
+        <div class="fights__points"></div>
+        <div class="fights__chess-green"></div>
+        <div class="fights__half-circle"></div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__logo"></div>
+      <button type="button" class="login login_type_footer">
+        Зарегистрироваться
+      </button>
+      <h3 class="footer__title">Шахматный клуб в Москве.</h3>
+      <p class="footer__copyright">© Chees Club.</p>
+    </footer>
+    <div class="popup">
+      <div class="popup__logo"></div>
+      <h2 class="popup__title">Регистрация</h2>
+      <form class="popup__form">
+        <input
+          type="text"
+          class="popup__input popup__input_type_name"
+          placeholder="Имя"
+        />
+        <input
+          type="text"
+          class="popup__input popup__input_type_email"
+          placeholder="Email"
+        />
+      </form>
+      <button type="submit" class="popup__submit">Выйти</button>
+    </div>
+    <script src="scripts/script.js"></script>
+  </body>
 </html>

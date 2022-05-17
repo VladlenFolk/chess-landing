@@ -1,0 +1,202 @@
+.header {
+  padding: 30px 160px 80px 160px;
+  box-sizing: border-box;
+  position: relative;
+  @media screen and (max-width: 860px) {
+    padding: 30px 50px 50px;
+  }
+  @media screen and (max-width: 660px) {
+    padding: 19px 20px 20px;
+  }
+
+  &__top {
+    @include flex($align: center, $alignC: center, $justify: space-between);
+  }
+
+  &__invitation {
+    line-height: 16.5px;
+    letter-spacing: 1%;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: "NotoSans", Arial, Helvetica, sans-serif;
+  }
+
+  &__vector {
+    background: url(../images/Vector.svg) no-repeat center;
+    width: 10.07px;
+    height: 12.81px;
+    margin: 0 2px 0 14px;
+  }
+
+  &__logo {
+    width: 38px;
+    height: 54px;
+    background: url(../images/pawn.png) no-repeat center;
+    display: flex;
+    flex-direction: column;
+    align-self: start;
+    @media screen and (max-width: 450px) {
+      background: url(../images/pawn550.svg) no-repeat center;
+      width: 26px;
+      height: 36px;
+    }
+  }
+
+  &__flex {
+    @include flex($justify: flex-end, $alignC: center, $align: center);
+    padding-right: 50px;
+    @media screen and (max-width: 860px) {
+      padding-right: 30px;
+    }
+    @media screen and (max-width: 660px) {
+      position: absolute;
+      visibility: hidden;
+    }
+  }
+
+  &__wrapper {
+    @include flex(
+      $direction: row,
+      $justify: flex-end,
+      $alignC: center,
+      $align: center
+    );
+    align-self: flex-end;
+  }
+
+  &__rectangle {
+    padding-top: 60px;
+    @media screen and (max-width: 660px) {
+      padding-top: 49px;
+    }
+    @media screen and (max-width: 450px) {
+      width: 63px;
+      height: 40px;
+    }
+  }
+
+  &__rectangle-wrapper {
+    position: relative;
+  }
+
+  &__club {
+    font-family: "NotoSans", Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #fff;
+    font-size: 16px;
+    line-height: 14.4px;
+    position: absolute;
+    top: 63px;
+    left: 18px;
+    @media screen and (max-width: 660px) {
+      top: 52px;
+    }
+    @media screen and (max-width: 450px) {
+      @include font(
+        $font,
+        $textColor,
+        $weight: 500,
+        $size: 12px,
+        $lh: 10.8px,
+        $fontNormal: normal
+      );
+      left: 14px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    max-width: 500px;
+    padding-top: 70px;
+    @include font(
+      $font,
+      $textColor,
+      $weight: 600,
+      $size: 70px,
+      $lh: 63px,
+      $fontNormal: normal
+    );
+    @media screen and (max-width: 660px) {
+      padding-top: 60px;
+      max-width: 280px;
+      @include font(
+        $font,
+        $textColor,
+        $weight: 600,
+        $size: 40px,
+        $lh: 36px,
+        $fontNormal: normal
+      );
+    }
+  }
+
+  &__subtitle {
+    overflow-wrap: break-word;
+    margin: 0;
+    padding: 40px 0 182px 0;
+    max-width: 470px;
+    @include font(
+      $font,
+      $textColor,
+      $weight: 400,
+      $size: 20px,
+      $lh: 26px,
+      $fontNormal: normal
+    );
+    opacity: 0.4;
+    @media screen and (max-width: 860px) {
+      padding-bottom: 212px;
+      opacity: 1;
+    }
+    @media screen and (max-width: 660px) {
+      padding-bottom: 110px;
+      padding-top: 20px;
+      max-width: 280px;
+      @include font(
+        $font,
+        $textColor,
+        $weight: 400,
+        $size: 12px,
+        $lh: 15.6px,
+        $fontNormal: normal
+      );
+    }
+  }
+
+  &__chess-desk {
+    background: url(../images/chess-desk.svg) no-repeat center;
+    width: 416px;
+    height: 104px;
+    @media screen and (max-width: 450px) {
+      background: url(../images/chess-desk550.svg) no-repeat center;
+      width: 280px;
+      height: 70px;
+    }
+  }
+
+  &__circles {
+    width: 480px;
+    height: 640px;
+    background: url(../images/circles.svg);
+    position: absolute;
+    bottom: 80px;
+    right: 0px;
+    overflow: hidden;
+    @include mediaImageR(
+      1120px,
+      url(../images/cercles1120.svg),
+      130px,
+      520px,
+      50px
+    );
+    @include mediaImageR(
+      660px,
+      url(../images/cercles3.svg),
+      120px,
+      60px,
+      390px,
+      $right: 16px
+    );
+  }
+}

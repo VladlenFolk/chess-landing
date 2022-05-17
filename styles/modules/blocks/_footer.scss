@@ -1,0 +1,68 @@
+.footer {
+  background-color: $secondaryColor;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__logo {
+    width: 38px;
+    height: 54px;
+    background: url(../images/pawn.png) no-repeat;
+    display: flex;
+    flex-direction: column;
+    margin: 80px 0 60px;
+    @media screen and (max-width: 450px) {
+      margin: 40px 0 40px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    padding-bottom: 20px;
+    @include font(
+      $font,
+      $textColor,
+      $weight: 400,
+      $size: 20px,
+      $lh: 26px,
+      $fontNormal: normal
+    );
+    @media screen and (max-width: 450px) {
+      @include font(
+        $font,
+        $textColor,
+        $weight: 400,
+        $size: 12px,
+        $lh: 15.6px,
+        $fontNormal: normal
+      );
+      padding-bottom: 10px;
+    }
+  }
+
+  &__copyright {
+    margin: 0;
+    padding-bottom: 80px;
+    @include font(
+      $font,
+      #8e9199,
+      $weight: 400,
+      $size: 15.1px,
+      $lh: 20px,
+      $fontNormal: normal
+    );
+    @media screen and (max-width: 450px) {
+      @include font(
+        $font,
+        #8e9199,
+        $weight: 400,
+        $size: 12px,
+        $lh: 12px,
+        $fontNormal: normal
+      );
+      padding-bottom: 40px;
+    }
+  }
+}
