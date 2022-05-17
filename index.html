@@ -12,18 +12,18 @@
   <body class="body">
     <header class="header">
       <div class="header__top">
-        <div class="header__logo"></div>
+        <div class="logo"></div>
         <div class="header__wrapper">
-          <div class="header__flex">
+          <a class="header__flex" href="#">
             <p class="header__invitation">Вступайте в клуб</p>
             <div class="header__vector"></div>
-          </div>
-          <button type="button" class="login">Зарегистрироваться</button>
+          </a>
+          <button type="button" class="login-button login-button_type_header">Зарегистрироваться</button>
         </div>
       </div>
       <div class="header__rectangle-wrapper">
         <img
-          src="images/Rectangle.svg"
+          src="images/icons/Rectangle.svg"
           class="header__rectangle"
           alt="квадрат"
         />
@@ -45,7 +45,7 @@
           играть — одно удовольствие!
         </p>
         <div class="our-team__members">
-          <div class="our-team__member-card">
+          <div class="our-team__member-card our-team__member-card_type_active">
             <img
               class="our-team__member-image"
               src="images/member1.jpg"
@@ -73,7 +73,11 @@
             <p class="our-team__hobby">Шахматист, геймер.</p>
           </div>
         </div>
-        <div class="our-team__points"></div>
+        <div class="points">
+          <div class="points__point points__point_type_team points__point_active"></div>
+          <div class="points__point points__point_type_team"></div>
+          <div class="points__point points__point_type_team"></div>
+        </div>
         <div class="our-team__circle"></div>
         <div class="our-team__question-wrapper">
           <h3 class="our-team__question">Хочешь в&nbsp;комаду?</h3>
@@ -86,11 +90,11 @@
         <h2 class="fights__title">Сражения</h2>
         <p class="fights__subtitle">
           Сражайтесь в парах и приятно проводите время. Если хотите прокачать
-          свои навыки — сыграйте с нашими шахматистами.
+          свои навыки — сыграйте с&nbsp;нашими шахматистами.
         </p>
         <div class="fights__image-wrapper">
           <img
-            class="fights__image"
+            class="fights__image fights__image_type_active"
             src="images/members.jpg"
             alt="шахматисты"
           />
@@ -105,35 +109,41 @@
             alt="шахматная партия"
           />
         </div>
-        <div class="fights__points"></div>
+        <div class="points">
+          <div class="points__point points__point_type_fight points__point_active"></div>
+          <div class="points__point points__point_type_fight"></div>
+          <div class="points__point points__point_type_fight"></div>
+        </div>
         <div class="fights__chess-green"></div>
         <div class="fights__half-circle"></div>
       </section>
     </main>
     <footer class="footer">
-      <div class="footer__logo"></div>
-      <button type="button" class="login login_type_footer">
+      <div class="logo logo_type_footer"></div>
+      <button type="button" class="login-button login-button_type_footer">
         Зарегистрироваться
       </button>
       <h3 class="footer__title">Шахматный клуб в Москве.</h3>
       <p class="footer__copyright">© Chees Club.</p>
     </footer>
     <div class="popup">
-      <div class="popup__logo"></div>
+      <div class="logo logo_type_popup"></div>
       <h2 class="popup__title">Регистрация</h2>
-      <form class="popup__form">
+      <form class="popup__form" name="registration">
         <input
           type="text"
           class="popup__input popup__input_type_name"
           placeholder="Имя"
+          name="name"
         />
         <input
           type="text"
           class="popup__input popup__input_type_email"
           placeholder="Email"
+          name="email"
         />
       </form>
-      <button type="submit" class="popup__submit">Выйти</button>
+      <button type="submit" class="login-button login-button_type_popup">Зарегистрироваться</button>
     </div>
     <script src="scripts/script.js"></script>
   </body>

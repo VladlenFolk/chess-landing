@@ -25,14 +25,8 @@
       $fontNormal: normal
     );
     @media screen and (max-width: 720px) {
-      @include font(
-        $font,
-        $textColor,
-        $weight: 600,
-        $size: 40px,
-        $lh: 36px,
-        $fontNormal: normal
-      );
+      font-size: 40px;
+      line-height: 36px;
       max-width: 280px;
       padding-bottom: 20px;
     }
@@ -51,17 +45,11 @@
     );
     max-width: 500px;
     @media screen and (max-width: 720px) {
-      @include font(
-        $font,
-        $textColor,
-        $weight: 400,
-        $size: 12px,
-        $lh: 15.6px,
-        $fontNormal: normal
-      );
+      font-size: 12px;
+      line-height: 15.6px;
       max-width: 280px;
+    }
   }
-}
 
   &__image-wrapper {
     display: flex;
@@ -89,30 +77,41 @@
       max-width: 280px;
       max-height: 280px;
     }
+    @media screen and (max-width: 320px) {
+      visibility: hidden;
+      position: absolute;
+    }
+  }
+
+  &__image_type_active{
+    visibility: visible;
+    position: relative;
   }
 
   &__chess-green {
-    background: url(../images/desk-green.svg) no-repeat center;
+    background: url(../images/icons/desk-green.svg) no-repeat;
+    background-size: contain;
+    background-position: center;
     width: 416px;
     height: 104px;
     margin: 110px 0 0 63%;
+    
     @media screen and (max-width: 1290px) {
       margin: 140px 0 0 252px;
     }
     @media screen and (max-width: 740px) {
-      margin: 60px 0 0 ;
+      margin: 60px 0 0;
       margin-left: 30%;
-      background: url(../images/chess-green320.svg) no-repeat center;
       width: 280px;
       height: 70px;
     }
     @media screen and (max-width: 440px) {
-      margin: 60px 0 0 ;
+      margin: 60px 0 0;
     }
   }
 
   &__half-circle {
-    background: url(../images/half-circle.svg) no-repeat center;
+    background: url(../images/icons/half-circle.svg) no-repeat center;
     width: 440px;
     height: 220px;
     position: absolute;
@@ -121,13 +120,13 @@
     @media screen and (max-width: 1290px) {
       left: -220px;
     }
-    @media screen and (max-width: 1290px) {
+    @media screen and (max-width: 730px) {
       visibility: hidden;
     }
   }
-  
+
   &__points {
-    background: url(../images/points.svg) no-repeat center;
+    background: url(../images/icons/ipoints.svg) no-repeat center;
     width: 44px;
     height: 8px;
     position: absolute;
