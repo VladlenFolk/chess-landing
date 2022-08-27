@@ -1,0 +1,211 @@
+.popup {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  visibility: hidden;
+  opacity: 0;
+  transition: linear 0.2s;
+  align-items: center;
+  background: rgba(0, 0, 0, 1);
+  position: fixed;
+  top: 0%;
+  right: 0%;
+
+  &_opened {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &__logo {
+    width: 38px;
+    height: 54px;
+    background: url(../images/pawn.png) no-repeat center;
+    margin: 120px auto 50px;
+    @media screen and (max-width: 768px) {
+      margin: 200px auto 50px;
+    }
+    @media screen and (max-width: 550px) {
+      background: url(../images/pawn550.svg) no-repeat center;
+      width: 26px;
+      height: 36px;
+      margin: 120px auto 40px;
+    }
+  }
+
+  &__title {
+    max-width: 500px;
+    margin: 0;
+    @include font(
+      $font,
+      $textColor,
+      $weight: 600,
+      $size: 34px,
+      $lh: 30.6px,
+      $fontNormal: normal
+    );
+    padding-bottom: 78px;
+    @media screen and (max-width: 450px) {
+      @include font(
+        $font,
+        $textColor,
+        $weight: 600,
+        $size: 30px,
+        $lh: 27px,
+        $fontNormal: normal
+      );
+      padding-bottom: 40px;
+    }
+  }
+
+  &__input_type_name {
+    cursor: pointer;
+    width: 500px;
+    height: 48px;
+    border-radius: 8px;
+    background-color: #1a1a1a;
+    margin-bottom: 20px;
+    text-indent: 28px;
+    border-width: 1px;
+    border-style: none;
+    @include font(
+      $font,
+      $textColor,
+      $weight: 400,
+      $size: 15px,
+      $lh: 18px,
+      $fontNormal: normal
+    );
+    letter-spacing: 0.01em;
+    @media screen and (max-width: 540px) {
+      font-size: 12px;
+      margin-bottom: 10px;
+      width: 280px;
+      height: 42px;
+    }
+  }
+
+  &__input_type_email {
+    cursor: pointer;
+    width: 500px;
+    height: 48px;
+    border-radius: 8px;
+    background-color: #1a1a1a;
+    text-indent: 28px;
+    border-width: 1px;
+    border-style: none;
+    @include font(
+      $font,
+      $textColor,
+      $weight: 400,
+      $size: 15px,
+      $lh: 18px,
+      $fontNormal: normal
+    );
+    letter-spacing: 0.01em;
+    @media screen and (max-width: 540px) {
+      font-size: 12px;
+      width: 280px;
+      height: 42px;
+    }
+  }
+
+  input:focus {
+    cursor: text;
+    outline: none;
+    border: 1px solid #5036e6;
+    background: rgba(26, 26, 26, 0.6);
+  }
+
+  input:hover {
+    background: rgba(26, 26, 26, 0.6);
+  }
+  // Настроил placeholder для разных браузеров
+
+  input::placeholder {
+    color: #fff;
+  }
+  input:-moz-placeholder {
+    color: #fff;
+  }
+  input::-moz-placeholder {
+    color: #fff;
+  }
+  input:-ms-input-placeholder {
+    color: #fff;
+  }
+  input::-ms-input-placeholder {
+    color: #fff;
+  }
+
+  // Настроил плавное исчезновение текста placeholder при клике на input
+
+  input::-webkit-input-placeholder {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+  input::-moz-placeholder {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+  input:-moz-placeholder {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+  input:-ms-input-placeholder {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+  input:focus::-webkit-input-placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  input:focus::-moz-placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  input:focus:-moz-placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  input:focus:-ms-input-placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  &__submit {
+    background-color: $bootColor;
+    color: $textColor;
+    padding: 0;
+    border: 0;
+    border-radius: 8px;
+    width: 108px;
+    height: 48px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.1px;
+    font-family: "NotoSans", Arial, Helvetica, sans-serif;
+    @media screen and (max-width: 540px) {
+      font-size: 10px;
+      height: 30px;
+    }
+  }
+
+  &__submit:hover {
+    background: #066c4c;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 253px;
+    @media screen and (max-width: 768px) {
+      padding-bottom: 203px;
+    }
+    @media screen and (max-width: 768px) {
+      padding-bottom: 143px;
+    }
+  }
+}
