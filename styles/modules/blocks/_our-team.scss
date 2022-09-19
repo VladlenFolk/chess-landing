@@ -24,14 +24,8 @@
       $fontNormal: normal
     );
     @media screen and (max-width: 720px) {
-      @include font(
-        $font,
-        $textColor,
-        $weight: 600,
-        $size: 40px,
-        $lh: 36px,
-        $fontNormal: normal
-      );
+      font-size: 40px;
+      line-height: 36px;
       max-width: 280px;
     }
   }
@@ -52,22 +46,18 @@
       padding-bottom: 140px;
     }
     @media screen and (max-width: 720px) {
-      @include font(
-        $font,
-        $textColor,
-        $weight: 400,
-        $size: 12px,
-        $lh: 15.6px,
-        $fontNormal: normal
-      );
+      font-size: 12px;
+      line-height: 15.6px;
       max-width: 280px;
       padding: 20px 0 60px;
     }
   }
 
   &__members {
+    transition: .2s ease;
     display: flex;
     justify-content: space-between;
+    position: relative;
   }
 
   &__members :nth-child(3n) {
@@ -83,7 +73,18 @@
     @media screen and (max-width: 1290px) {
       padding-right: 28px;
     }
+    @media screen and (max-width: 320px) {
+      position: absolute;
+      visibility: hidden;
+    }
   }
+  &__member-card_type_active {
+    @media screen and (max-width: 320px) {
+      position: relative;
+      visibility: visible;
+    }
+  }
+
 
   &__member-image {
     max-width: 320px;
@@ -110,15 +111,9 @@
     @media screen and (max-width: 320px) {
       padding-top: 20px;
       text-align: center;
-      @include font(
-        $font,
-        $textColor,
-        $weight: 400,
-        $size: 18px,
-        $lh: 23.4px,
-        $fontNormal: normal
-      );
-      letter-spacing: 5.5%;
+      font-size: 18px;
+      line-height: 23.4px;
+      letter-spacing: 0.055em;
     }
   }
   &__hobby {
@@ -135,19 +130,13 @@
     @media screen and (max-width: 320px) {
       text-align: center;
       margin-top: 7px;
-      @include font(
-        $font,
-        $textColor,
-        $weight: 400,
-        $size: 12px,
-        $lh: 15.6px,
-        $fontNormal: normal
-      );
+      font-size: 12px;
+      line-height: 15.6px;
     }
   }
 
   &__points {
-    background: url(../images/points.svg) no-repeat center;
+    background: url(../images/icons/points.svg) no-repeat center;
     width: 44px;
     height: 8px;
     position: absolute;
@@ -167,7 +156,7 @@
     @media screen and (max-width: 1290px) {
       padding: 171px 0 121px;
     }
-    @media screen and (max-width: 1290px) {
+    @media screen and (max-width: 690px) {
       padding: 60px 0 200px;
     }
   }
@@ -175,21 +164,20 @@
   &__circle {
     width: 880px;
     height: 440px;
-    background: url(../images/circles2.svg) no-repeat center;
+    background: url(../images/icons/circles2.svg) no-repeat center;
     position: absolute;
     bottom: 60px;
     left: -110px;
     overflow: hidden;
-    @include mediaImageL(
-      1360px,
-      url(../images/cercles-green2.svg),
-      180px,
-      360px,
-      50px,
-      0
-    );
+    @media screen and (max-width: 1360px) {
+      background: url(../images/icons/cercles-green2.svg) no-repeat center;
+      width: 180px;
+      height: 360px;
+      bottom: 50px;
+      left: 0;
+    }
     @media screen and (max-width: 700px) {
-      background: url(../images/cercle-down.svg) no-repeat center;
+      background: url(../images/icons/cercle-down.svg) no-repeat center;
       width: 280px;
       height: 140px;
       bottom: 0;
@@ -213,14 +201,8 @@
     }
     @media screen and (max-width: 700px) {
       max-width: 280px;
-      @include font(
-        $font,
-        $textColor,
-        $weight: 600,
-        $size: 40px,
-        $lh: 36px,
-        $fontNormal: normal
-      );
+      font-size: 40px;
+      line-height: 36px;
     }
   }
 
@@ -242,14 +224,8 @@
     @media screen and (max-width: 700px) {
       max-width: 280px;
       padding-top: 20px;
-      @include font(
-        $font,
-        $textColor,
-        $weight: 400,
-        $size: 12px,
-        $lh: 15.6px,
-        $fontNormal: normal
-      );
+      font-size: 12px;
+      line-height: 15.6px;
     }
   }
 

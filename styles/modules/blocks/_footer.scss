@@ -6,18 +6,6 @@
   justify-content: center;
   align-items: center;
 
-  &__logo {
-    width: 38px;
-    height: 54px;
-    background: url(../images/pawn.png) no-repeat;
-    display: flex;
-    flex-direction: column;
-    margin: 80px 0 60px;
-    @media screen and (max-width: 450px) {
-      margin: 40px 0 40px;
-    }
-  }
-
   &__title {
     margin: 0;
     padding-bottom: 20px;
@@ -30,14 +18,8 @@
       $fontNormal: normal
     );
     @media screen and (max-width: 450px) {
-      @include font(
-        $font,
-        $textColor,
-        $weight: 400,
-        $size: 12px,
-        $lh: 15.6px,
-        $fontNormal: normal
-      );
+      font-size: 12px;
+      line-height: 15.6px;
       padding-bottom: 10px;
     }
   }
@@ -54,14 +36,8 @@
       $fontNormal: normal
     );
     @media screen and (max-width: 450px) {
-      @include font(
-        $font,
-        #8e9199,
-        $weight: 400,
-        $size: 12px,
-        $lh: 12px,
-        $fontNormal: normal
-      );
+      font-size: 12px;
+      line-height: 12px;
       padding-bottom: 40px;
     }
   }

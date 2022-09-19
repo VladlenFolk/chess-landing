@@ -1,3 +1,4 @@
+@import "../vendor/normalize.css";
 @import "../vendor/fonts/font";
 @import "./modules/variables";
 @import "./modules/mixin";
@@ -8,5 +9,7 @@
 @import "../vendor/fonts/font";
 @import "./modules/blocks/our-team";
 @import "./modules/blocks/fights";
-@import "./modules/blocks/login";
+@import "./modules/blocks/login-button";
 @import "./modules/blocks/popup";
+@import "./modules/blocks/points";
+@import "./modules/blocks/logo";

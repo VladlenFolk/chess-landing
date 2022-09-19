@@ -26,23 +26,3 @@
   line-height: $lh;
   font-style: $fontNormal;
 }
-
-@mixin mediaImageL($maxWidth, $background, $width, $heigh, $bot, $left) {
-  @media screen and (max-width: $maxWidth) {
-    background: $background no-repeat center;
-    width: $width;
-    height: $heigh;
-    bottom: $bot;
-    left: $left;
-  }
-}
-
-@mixin mediaImageR($maxWidth, $background, $width, $heigh, $bot, $right: 0) {
-  @media screen and (max-width: $maxWidth) {
-    background: $background no-repeat center;
-    width: $width;
-    height: $heigh;
-    bottom: $bot;
-    right: $right;
-  }
-}
