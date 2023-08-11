@@ -31,5 +31,3 @@ git clone https://github.com/VladlenFolk/how-to-learn.git
 * Адаптивная верстка сайта 
 * Создание формы обратной связи
   
-**Ссылка на проект**
-https://vladlenfolk.github.io/chess-landing/index.html
